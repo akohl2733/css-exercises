@@ -1,28 +1,84 @@
+/* make entire think a vertical flex box
+   will the make horizontal parts later */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* flex the header to center it vertically
+   change font size and weight */
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 24pt;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
 }
 
+/* add flex capabilities to footer and make everything centered */
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* remove shrink ability of sidebar and add padding */
 .sidebar {
   width: 300px;
   background: royalblue;
+  flex-shrink: 0;
+  padding: 16px;
 }
 
+/* create box with padding and margins between each */
 .card {
-  border: 1px solid #eee;
+  border: 1px solid #EEE;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 300px;
+  padding: 16px;
+  margin: 16px;
+}
+
+/* create container to hold the text blocks in the middle 
+   flex wrap it so it comes around the other side */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+
+/* create another class for everything both sidebar and container 
+   make them horizonatal in column flex box and fill the page */
+.everything {
+  display: flex;
+  flex: 1;
+}
+
+/* remove style for list as well as formatting */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*add bottom margin to format each member of list */
+li {
+  margin-bottom: 16px;
+}
+
+/* remove link lines and change color/font */
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
 }

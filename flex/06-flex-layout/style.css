@@ -5,6 +5,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -13,9 +15,9 @@ img {
 
 button {
   font-family: Roboto, sans-serif;
-  border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px;
 }
 
 input {
@@ -24,4 +26,48 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+/* need to make both flex boxes and separate them with space 
+   pad out for aesthetic*/
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+/* make the links flex boxes
+   change margins and padding for aesthetics
+   remove bullet points */
+.left-links,
+.right-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  list-style: none;
+}
+
+/* make image and buttons flex box
+   make it a column to fit everything in the middle
+   flex 1 to make everything fit the page*/
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+
+/* change color to gray and remove link look */
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* change background to white */
+.footer {
+  background: #eee;
 }
